@@ -1,0 +1,34 @@
+aid: apache-tika
+name: Apache Tika
+description: >-
+  Apache Tika is a toolkit for detecting and extracting metadata and structured text content from various documents using existing parser libraries. It supports over 1000 file formats including PDF, Word, Excel, HTML, and multimedia formats.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Content Extraction
+  - Metadata
+  - Document Processing
+  - Text Extraction
+created: '2026-03-16'
+modified: '2026-03-16'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/apache-tika/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: apache-tika:apache-tika-rest-api
+    name: Apache Tika REST API
+    description: >-
+      Tika provides a REST API (tika-server) for content detection and extraction, a Java API for parsing documents, and a comprehensive parser API supporting over 1000 file formats including PDF, Office documents, images, audio, and video.
+    humanURL: https://tika.apache.org/2.9.1/gettingstarted.html
+    tags:
+      - REST
+      - Java
+      - Content Extraction
+    properties:
+      - type: Documentation
+        url: https://tika.apache.org/2.9.1/gettingstarted.html
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
