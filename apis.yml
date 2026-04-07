@@ -8,8 +8,8 @@ access: 3rd-Party
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Content Extraction
-  - Metadata
   - Document Processing
+  - Metadata
   - Text Extraction
 created: '2026-03-16'
 modified: '2026-03-16'
@@ -23,9 +23,9 @@ apis:
       Tika provides a REST API (tika-server) for content detection and extraction, a Java API for parsing documents, and a comprehensive parser API supporting over 1000 file formats including PDF, Office documents, images, audio, and video.
     humanURL: https://tika.apache.org/2.9.1/gettingstarted.html
     tags:
-      - REST
-      - Java
       - Content Extraction
+      - Java
+      - REST
     properties:
       - type: Documentation
         url: https://tika.apache.org/2.9.1/gettingstarted.html
