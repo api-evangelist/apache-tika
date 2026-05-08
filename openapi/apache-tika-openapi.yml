@@ -1,0 +1,234 @@
+openapi: 3.1.0
+info:
+  title: Apache Tika Server REST API
+  version: "1.0"
+  description: >-
+    Minimal OpenAPI for the Apache Tika Server REST API providing content and
+    metadata extraction, language detection, translation, recursive metadata,
+    archive unpacking, and server status endpoints.
+servers:
+  - url: http://localhost:9998
+    description: Tika Server
+x-generated-from: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+x-generated-by: claude-crawl-2026-05-08
+paths:
+  /:
+    get:
+      summary: Server welcome page
+      responses: { "200": { description: OK } }
+  /tika:
+    get:
+      summary: Tika identity
+      responses: { "200": { description: OK } }
+    put:
+      summary: Extract content from a document
+      requestBody:
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses: { "200": { description: OK } }
+  /tika/main:
+    put:
+      summary: Extract main content
+      requestBody:
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses: { "200": { description: OK } }
+  /tika/text:
+    put:
+      summary: Extract plain text
+      requestBody:
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses: { "200": { description: OK } }
+  /tika/form:
+    post:
+      summary: Extract content via multipart form upload
+      requestBody:
+        content:
+          multipart/form-data:
+            schema: { type: object }
+      responses: { "200": { description: OK } }
+  /meta:
+    get:
+      summary: Metadata identity
+      responses: { "200": { description: OK } }
+    put:
+      summary: Extract document metadata
+      requestBody:
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses: { "200": { description: OK } }
+  /meta/{key}:
+    get:
+      summary: Get a metadata key (identity)
+      parameters: [ { name: key, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    put:
+      summary: Extract specific metadata key
+      parameters: [ { name: key, in: path, required: true, schema: { type: string } } ]
+      requestBody:
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses: { "200": { description: OK } }
+  /meta/form:
+    post:
+      summary: Extract metadata via multipart form upload
+      requestBody:
+        content:
+          multipart/form-data:
+            schema: { type: object }
+      responses: { "200": { description: OK } }
+  /detect/stream:
+    put:
+      summary: Detect MIME type of an uploaded stream
+      requestBody:
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses: { "200": { description: OK } }
+  /language/stream:
+    put:
+      summary: Detect language of an uploaded stream
+      requestBody:
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses: { "200": { description: OK } }
+    post:
+      summary: Detect language of an uploaded stream (POST)
+      requestBody:
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses: { "200": { description: OK } }
+  /language/string:
+    put:
+      summary: Detect language of a string
+      requestBody:
+        content:
+          text/plain:
+            schema: { type: string }
+      responses: { "200": { description: OK } }
+    post:
+      summary: Detect language of a string (POST)
+      requestBody:
+        content:
+          text/plain:
+            schema: { type: string }
+      responses: { "200": { description: OK } }
+  /translate/all/{translator}/{src}/{dest}:
+    put:
+      summary: Translate using a specific translator
+      parameters:
+        - { name: translator, in: path, required: true, schema: { type: string } }
+        - { name: src, in: path, required: true, schema: { type: string } }
+        - { name: dest, in: path, required: true, schema: { type: string } }
+      responses: { "200": { description: OK } }
+    post:
+      summary: Translate using a specific translator (POST)
+      parameters:
+        - { name: translator, in: path, required: true, schema: { type: string } }
+        - { name: src, in: path, required: true, schema: { type: string } }
+        - { name: dest, in: path, required: true, schema: { type: string } }
+      responses: { "200": { description: OK } }
+  /translate/all/{src}/{dest}:
+    put:
+      summary: Translate using default translator
+      parameters:
+        - { name: src, in: path, required: true, schema: { type: string } }
+        - { name: dest, in: path, required: true, schema: { type: string } }
+      responses: { "200": { description: OK } }
+    post:
+      summary: Translate using default translator (POST)
+      parameters:
+        - { name: src, in: path, required: true, schema: { type: string } }
+        - { name: dest, in: path, required: true, schema: { type: string } }
+      responses: { "200": { description: OK } }
+  /rmeta:
+    get:
+      summary: Recursive metadata identity
+      responses: { "200": { description: OK } }
+    put:
+      summary: Recursive metadata extraction
+      requestBody:
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses: { "200": { description: OK } }
+  /rmeta/text:
+    put:
+      summary: Recursive metadata with plain text
+      requestBody:
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses: { "200": { description: OK } }
+  /rmeta/html:
+    put:
+      summary: Recursive metadata with HTML content
+      requestBody:
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses: { "200": { description: OK } }
+  /rmeta/ignore:
+    put:
+      summary: Recursive metadata, ignore content
+      requestBody:
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses: { "200": { description: OK } }
+  /rmeta/form:
+    post:
+      summary: Recursive metadata via multipart form upload
+      requestBody:
+        content:
+          multipart/form-data:
+            schema: { type: object }
+      responses: { "200": { description: OK } }
+  /unpack:
+    put:
+      summary: Unpack archive embedded resources
+      requestBody:
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses: { "200": { description: OK } }
+  /unpack/all:
+    put:
+      summary: Unpack all embedded resources
+      requestBody:
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses: { "200": { description: OK } }
+  /mime-types:
+    get:
+      summary: Supported MIME types
+      responses: { "200": { description: OK } }
+  /detectors:
+    get:
+      summary: Registered detectors
+      responses: { "200": { description: OK } }
+  /parsers:
+    get:
+      summary: Registered parsers
+      responses: { "200": { description: OK } }
+  /parsers/details:
+    get:
+      summary: Detailed parser information
+      responses: { "200": { description: OK } }
+  /status:
+    get:
+      summary: Server status
+      responses: { "200": { description: OK } }
+components:
+  schemas:
+    GenericObject:
+      type: object

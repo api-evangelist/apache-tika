@@ -44,6 +44,8 @@ apis:
         url: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
       - type: Documentation
         url: https://tika.apache.org/
+      - url: openapi/apache-tika-openapi.yml
+        type: OpenAPI
   - aid: apache-tika:apache-tika-java-api
     name: Apache Tika Java API
     description: >-
