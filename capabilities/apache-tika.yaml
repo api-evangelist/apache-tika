@@ -1,0 +1,1312 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Apache Tika Server REST API
+  description: 'Apache Tika Server REST API. 33 operations. Lead operation: Server welcome page. Self-contained Naftiko capability
+    covering one Apache Tika business surface.'
+  tags:
+  - Apache Tika
+  - Apache Tika Server REST API
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    APACHE_TIKA_API_KEY: APACHE_TIKA_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: apache-tika
+    baseUri: http://localhost:9998
+    description: Apache Tika Server REST API business capability. Self-contained, no shared references.
+    resources:
+    - name: root
+      path: /
+      operations:
+      - name: get
+        method: GET
+        description: Server welcome page
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: detect-stream
+      path: /detect/stream
+      operations:
+      - name: put
+        method: PUT
+        description: Detect MIME type of an uploaded stream
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: detectors
+      path: /detectors
+      operations:
+      - name: get
+        method: GET
+        description: Registered detectors
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: language-stream
+      path: /language/stream
+      operations:
+      - name: put
+        method: PUT
+        description: Detect language of an uploaded stream
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+      - name: post
+        method: POST
+        description: Detect language of an uploaded stream (POST)
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: language-string
+      path: /language/string
+      operations:
+      - name: put
+        method: PUT
+        description: Detect language of a string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+      - name: post
+        method: POST
+        description: Detect language of a string (POST)
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: meta
+      path: /meta
+      operations:
+      - name: get
+        method: GET
+        description: Metadata identity
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Extract document metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: meta-form
+      path: /meta/form
+      operations:
+      - name: post
+        method: POST
+        description: Extract metadata via multipart form upload
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: meta-key
+      path: /meta/{key}
+      operations:
+      - name: get
+        method: GET
+        description: Get a metadata key (identity)
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: key
+          in: path
+          type: string
+          required: true
+      - name: put
+        method: PUT
+        description: Extract specific metadata key
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: key
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: mime-types
+      path: /mime-types
+      operations:
+      - name: get
+        method: GET
+        description: Supported MIME types
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: parsers
+      path: /parsers
+      operations:
+      - name: get
+        method: GET
+        description: Registered parsers
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: parsers-details
+      path: /parsers/details
+      operations:
+      - name: get
+        method: GET
+        description: Detailed parser information
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: rmeta
+      path: /rmeta
+      operations:
+      - name: get
+        method: GET
+        description: Recursive metadata identity
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Recursive metadata extraction
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: rmeta-form
+      path: /rmeta/form
+      operations:
+      - name: post
+        method: POST
+        description: Recursive metadata via multipart form upload
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: rmeta-html
+      path: /rmeta/html
+      operations:
+      - name: put
+        method: PUT
+        description: Recursive metadata with HTML content
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: rmeta-ignore
+      path: /rmeta/ignore
+      operations:
+      - name: put
+        method: PUT
+        description: Recursive metadata, ignore content
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: rmeta-text
+      path: /rmeta/text
+      operations:
+      - name: put
+        method: PUT
+        description: Recursive metadata with plain text
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: status
+      path: /status
+      operations:
+      - name: get
+        method: GET
+        description: Server status
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tika
+      path: /tika
+      operations:
+      - name: get
+        method: GET
+        description: Tika identity
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Extract content from a document
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: tika-form
+      path: /tika/form
+      operations:
+      - name: post
+        method: POST
+        description: Extract content via multipart form upload
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: tika-main
+      path: /tika/main
+      operations:
+      - name: put
+        method: PUT
+        description: Extract main content
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: tika-text
+      path: /tika/text
+      operations:
+      - name: put
+        method: PUT
+        description: Extract plain text
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: translate-all-src-dest
+      path: /translate/all/{src}/{dest}
+      operations:
+      - name: put
+        method: PUT
+        description: Translate using default translator
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: src
+          in: path
+          type: string
+          required: true
+        - name: dest
+          in: path
+          type: string
+          required: true
+      - name: post
+        method: POST
+        description: Translate using default translator (POST)
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: src
+          in: path
+          type: string
+          required: true
+        - name: dest
+          in: path
+          type: string
+          required: true
+    - name: translate-all-translator-src-dest
+      path: /translate/all/{translator}/{src}/{dest}
+      operations:
+      - name: put
+        method: PUT
+        description: Translate using a specific translator
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: translator
+          in: path
+          type: string
+          required: true
+        - name: src
+          in: path
+          type: string
+          required: true
+        - name: dest
+          in: path
+          type: string
+          required: true
+      - name: post
+        method: POST
+        description: Translate using a specific translator (POST)
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: translator
+          in: path
+          type: string
+          required: true
+        - name: src
+          in: path
+          type: string
+          required: true
+        - name: dest
+          in: path
+          type: string
+          required: true
+    - name: unpack
+      path: /unpack
+      operations:
+      - name: put
+        method: PUT
+        description: Unpack archive embedded resources
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: unpack-all
+      path: /unpack/all
+      operations:
+      - name: put
+        method: PUT
+        description: Unpack all embedded resources
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+  exposes:
+  - type: rest
+    namespace: apache-tika-rest
+    port: 8080
+    description: REST adapter for Apache Tika Server REST API. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1
+      name: root
+      description: REST surface for root.
+      operations:
+      - method: GET
+        name: get
+        description: Server welcome page
+        call: apache-tika.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/detect/stream
+      name: detect-stream
+      description: REST surface for detect-stream.
+      operations:
+      - method: PUT
+        name: put
+        description: Detect MIME type of an uploaded stream
+        call: apache-tika.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/detectors
+      name: detectors
+      description: REST surface for detectors.
+      operations:
+      - method: GET
+        name: get
+        description: Registered detectors
+        call: apache-tika.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/language/stream
+      name: language-stream
+      description: REST surface for language-stream.
+      operations:
+      - method: PUT
+        name: put
+        description: Detect language of an uploaded stream
+        call: apache-tika.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Detect language of an uploaded stream (POST)
+        call: apache-tika.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/language/string
+      name: language-string
+      description: REST surface for language-string.
+      operations:
+      - method: PUT
+        name: put
+        description: Detect language of a string
+        call: apache-tika.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Detect language of a string (POST)
+        call: apache-tika.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/meta
+      name: meta
+      description: REST surface for meta.
+      operations:
+      - method: GET
+        name: get
+        description: Metadata identity
+        call: apache-tika.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Extract document metadata
+        call: apache-tika.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/meta/form
+      name: meta-form
+      description: REST surface for meta-form.
+      operations:
+      - method: POST
+        name: post
+        description: Extract metadata via multipart form upload
+        call: apache-tika.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/meta/{key}
+      name: meta-key
+      description: REST surface for meta-key.
+      operations:
+      - method: GET
+        name: get
+        description: Get a metadata key (identity)
+        call: apache-tika.get
+        with:
+          key: rest.key
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Extract specific metadata key
+        call: apache-tika.put
+        with:
+          key: rest.key
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/mime-types
+      name: mime-types
+      description: REST surface for mime-types.
+      operations:
+      - method: GET
+        name: get
+        description: Supported MIME types
+        call: apache-tika.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/parsers
+      name: parsers
+      description: REST surface for parsers.
+      operations:
+      - method: GET
+        name: get
+        description: Registered parsers
+        call: apache-tika.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/parsers/details
+      name: parsers-details
+      description: REST surface for parsers-details.
+      operations:
+      - method: GET
+        name: get
+        description: Detailed parser information
+        call: apache-tika.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/rmeta
+      name: rmeta
+      description: REST surface for rmeta.
+      operations:
+      - method: GET
+        name: get
+        description: Recursive metadata identity
+        call: apache-tika.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Recursive metadata extraction
+        call: apache-tika.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/rmeta/form
+      name: rmeta-form
+      description: REST surface for rmeta-form.
+      operations:
+      - method: POST
+        name: post
+        description: Recursive metadata via multipart form upload
+        call: apache-tika.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/rmeta/html
+      name: rmeta-html
+      description: REST surface for rmeta-html.
+      operations:
+      - method: PUT
+        name: put
+        description: Recursive metadata with HTML content
+        call: apache-tika.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/rmeta/ignore
+      name: rmeta-ignore
+      description: REST surface for rmeta-ignore.
+      operations:
+      - method: PUT
+        name: put
+        description: Recursive metadata, ignore content
+        call: apache-tika.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/rmeta/text
+      name: rmeta-text
+      description: REST surface for rmeta-text.
+      operations:
+      - method: PUT
+        name: put
+        description: Recursive metadata with plain text
+        call: apache-tika.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/status
+      name: status
+      description: REST surface for status.
+      operations:
+      - method: GET
+        name: get
+        description: Server status
+        call: apache-tika.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tika
+      name: tika
+      description: REST surface for tika.
+      operations:
+      - method: GET
+        name: get
+        description: Tika identity
+        call: apache-tika.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Extract content from a document
+        call: apache-tika.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tika/form
+      name: tika-form
+      description: REST surface for tika-form.
+      operations:
+      - method: POST
+        name: post
+        description: Extract content via multipart form upload
+        call: apache-tika.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tika/main
+      name: tika-main
+      description: REST surface for tika-main.
+      operations:
+      - method: PUT
+        name: put
+        description: Extract main content
+        call: apache-tika.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tika/text
+      name: tika-text
+      description: REST surface for tika-text.
+      operations:
+      - method: PUT
+        name: put
+        description: Extract plain text
+        call: apache-tika.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/translate/all/{src}/{dest}
+      name: translate-all-src-dest
+      description: REST surface for translate-all-src-dest.
+      operations:
+      - method: PUT
+        name: put
+        description: Translate using default translator
+        call: apache-tika.put
+        with:
+          src: rest.src
+          dest: rest.dest
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Translate using default translator (POST)
+        call: apache-tika.post
+        with:
+          src: rest.src
+          dest: rest.dest
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/translate/all/{translator}/{src}/{dest}
+      name: translate-all-translator-src-dest
+      description: REST surface for translate-all-translator-src-dest.
+      operations:
+      - method: PUT
+        name: put
+        description: Translate using a specific translator
+        call: apache-tika.put
+        with:
+          translator: rest.translator
+          src: rest.src
+          dest: rest.dest
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Translate using a specific translator (POST)
+        call: apache-tika.post
+        with:
+          translator: rest.translator
+          src: rest.src
+          dest: rest.dest
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/unpack
+      name: unpack
+      description: REST surface for unpack.
+      operations:
+      - method: PUT
+        name: put
+        description: Unpack archive embedded resources
+        call: apache-tika.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/unpack/all
+      name: unpack-all
+      description: REST surface for unpack-all.
+      operations:
+      - method: PUT
+        name: put
+        description: Unpack all embedded resources
+        call: apache-tika.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: apache-tika-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Apache Tika Server REST API. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: server-welcome-page
+      description: Server welcome page
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-tika.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: detect-mime-type-uploaded-stream
+      description: Detect MIME type of an uploaded stream
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: registered-detectors
+      description: Registered detectors
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-tika.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: detect-language-uploaded-stream
+      description: Detect language of an uploaded stream
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: detect-language-uploaded-stream-post
+      description: Detect language of an uploaded stream (POST)
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-tika.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: detect-language-string
+      description: Detect language of a string
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: detect-language-string-post
+      description: Detect language of a string (POST)
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-tika.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: metadata-identity
+      description: Metadata identity
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-tika.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: extract-document-metadata
+      description: Extract document metadata
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: extract-metadata-multipart-form-upload
+      description: Extract metadata via multipart form upload
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-tika.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-metadata-key-identity
+      description: Get a metadata key (identity)
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-tika.get
+      with:
+        key: tools.key
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: extract-specific-metadata-key
+      description: Extract specific metadata key
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        key: tools.key
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: supported-mime-types
+      description: Supported MIME types
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-tika.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: registered-parsers
+      description: Registered parsers
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-tika.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: detailed-parser-information
+      description: Detailed parser information
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-tika.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: recursive-metadata-identity
+      description: Recursive metadata identity
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-tika.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: recursive-metadata-extraction
+      description: Recursive metadata extraction
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: recursive-metadata-multipart-form-upload
+      description: Recursive metadata via multipart form upload
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-tika.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: recursive-metadata-html-content
+      description: Recursive metadata with HTML content
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: recursive-metadata-ignore-content
+      description: Recursive metadata, ignore content
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: recursive-metadata-plain-text
+      description: Recursive metadata with plain text
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: server-status
+      description: Server status
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-tika.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: tika-identity
+      description: Tika identity
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-tika.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: extract-content-document
+      description: Extract content from a document
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: extract-content-multipart-form-upload
+      description: Extract content via multipart form upload
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-tika.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: extract-main-content
+      description: Extract main content
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: extract-plain-text
+      description: Extract plain text
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: translate-using-default-translator
+      description: Translate using default translator
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        src: tools.src
+        dest: tools.dest
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: translate-using-default-translator-post
+      description: Translate using default translator (POST)
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-tika.post
+      with:
+        src: tools.src
+        dest: tools.dest
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: translate-using-specific-translator
+      description: Translate using a specific translator
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        translator: tools.translator
+        src: tools.src
+        dest: tools.dest
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: translate-using-specific-translator-post
+      description: Translate using a specific translator (POST)
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-tika.post
+      with:
+        translator: tools.translator
+        src: tools.src
+        dest: tools.dest
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: unpack-archive-embedded-resources
+      description: Unpack archive embedded resources
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: unpack-all-embedded-resources
+      description: Unpack all embedded resources
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: apache-tika.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
