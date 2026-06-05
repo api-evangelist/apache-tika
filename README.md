@@ -1,94 +1,88 @@
 # Apache Tika (apache-tika)
-Apache Tika is a toolkit for detecting and extracting metadata and structured text content from over 1,000 file formats including PDF, Microsoft Office, HTML, XML, images, and archive formats. It provides a REST API server, Java library, and command-line tool.
 
-**URL:** [https://tika.apache.org/](https://tika.apache.org/)
+Apache Tika is a toolkit for detecting and extracting metadata and structured text content from over 1,000 file formats including PDF, Microsoft Office (Word, Excel, PowerPoint), OpenDocument, HTML, XML, images, audio, video, and archive formats. Tika provides a REST API server, Java library, and command-line tool. It is used by Apache Solr, Apache Nutch, and many other systems for content extraction and indexing. It is maintained by the Apache Software Foundation.
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/apache-tika/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/apache-tika/refs/heads/main/apis.yml)
 
-## Tags:
+## Scope
 
- - Content Extraction, Document Processing, Metadata, Text Extraction, Open Source
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
+
+## Tags
+
+- Content Extraction
+- Document Processing
+- Metadata
+- Text Extraction
+- Open Source
 
 ## Timestamps
 
 - **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+- **Modified:** 2026-05-19
 
 ## APIs
 
 ### Apache Tika REST API
-HTTP endpoints for content type detection, text extraction, metadata extraction, and language detection from uploaded documents including PUT /tika, PUT /meta, PUT /detect/stream, and GET /parsers.
 
-**Human URL:** [https://cwiki.apache.org/confluence/display/TIKA/TikaServer](https://cwiki.apache.org/confluence/display/TIKA/TikaServer)
+The Tika Server REST API provides HTTP endpoints for content type detection, text extraction, metadata extraction, and language detection from uploaded documents. Key endpoints include: PUT /tika for full text extraction, PUT /meta for metadata-only extraction, PUT /detect/stream for MIME type detection, PUT /language/stream for language detection, and GET /parsers for listing available parsers. The server supports streaming large files and returns JSON or plain text responses.
 
-#### Tags:
+- **Human URL:** [https://cwiki.apache.org/confluence/display/TIKA/TikaServer](https://cwiki.apache.org/confluence/display/TIKA/TikaServer)
 
- - REST, Content Extraction, Metadata, Document Processing, Text Extraction
+#### Tags
+
+- REST
+- Content Extraction
+- Metadata
+- Document Processing
+- Text Extraction
 
 #### Properties
 
 - [Documentation](https://cwiki.apache.org/confluence/display/TIKA/TikaServer)
 - [Documentation](https://tika.apache.org/)
+- [OpenAPI](openapi/apache-tika-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/apache-tika.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/apache-tika.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Apache Tika Java API
-Java API with AutoDetectParser, Metadata class, ContentHandler, and Detector for automatic format detection and text/metadata extraction from any supported format.
 
-**Human URL:** [https://tika.apache.org/](https://tika.apache.org/)
+The Tika Java API provides the AutoDetectParser for automatic format detection and parsing, Metadata class for reading extracted metadata fields, ContentHandler for streaming SAX-based text extraction, and Detector for MIME type identification. The facade Tika class provides a simple one-line API for text extraction from any supported format.
 
-#### Tags:
+- **Human URL:** [https://tika.apache.org/](https://tika.apache.org/)
 
- - Java, Content Extraction, Parser, Metadata
+#### Tags
+
+- Java
+- Content Extraction
+- Parser
+- Metadata
 
 #### Properties
 
 - [Documentation](https://tika.apache.org/)
-- [APIReference](https://tika.apache.org/1.28/api/)
-- [Maven Java SDK](https://search.maven.org/search?q=org.apache.tika)
+- [API Reference](https://tika.apache.org/1.28/api/)
+- [SDK](https://search.maven.org/search?q=org.apache.tika)
+- [Postman Collection](collections/apache-tika.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/apache-tika.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ## Common Properties
 
-- [GitHubRepository](https://github.com/apache/tika)
+- [GitHub Repository](https://github.com/apache/tika)
 - [Documentation](https://tika.apache.org/)
 - [Portal](https://tika.apache.org/)
-- [GettingStarted](https://tika.apache.org/gettingstarted.html)
-- [ReleaseNotes](https://github.com/apache/tika/releases)
+- [Getting Started](https://tika.apache.org/gettingstarted.html)
+- [Release Notes](https://github.com/apache/tika/releases)
 - [Support](https://cwiki.apache.org/confluence/display/TIKA/MailingLists)
-- [TermsOfService](https://www.apache.org/licenses/)
-- [Python Tika Package](https://pypi.org/project/tika/)
-
-## Features
-
-| Name | Description |
-|------|-------------|
-| 1000+ Format Support | Detect and extract content from over 1,000 file formats using parser plugins. |
-| Metadata Extraction | Extract document metadata including author, creation date, title, and format-specific properties. |
-| Language Detection | Automatic language detection from extracted text content. |
-| MIME Type Detection | Accurate MIME type detection based on file content (magic bytes) not just file extension. |
-| REST Server | Standalone HTTP server for document processing without Java library dependency. |
-| OCR Integration | Optional Tesseract OCR integration for text extraction from images and scanned PDFs. |
-| Recursive Parsing | Recursive parsing of archive formats and embedded documents. |
-
-## Use Cases
-
-| Name | Description |
-|------|-------------|
-| Search Indexing | Extract text from documents for indexing in Apache Solr or Elasticsearch. |
-| Document Intelligence | Automated metadata extraction and classification for document management. |
-| Content Migration | Batch content extraction during digital archive migration. |
-| E-Discovery | Legal e-discovery content extraction from diverse document collections. |
-
-## Integrations
-
-| Name | Description |
-|------|-------------|
-| Apache Solr | Solr Cell uses Tika for extracting text from uploaded documents. |
-| Apache Nutch | Nutch web crawler uses Tika for parsing fetched web page content. |
-| Elasticsearch | Ingest attachment processor uses Tika for document content extraction. |
-| Tesseract OCR | Optional Tesseract integration for OCR on images and scanned documents. |
-| Apache NiFi | NiFi processor integration for automated document parsing workflows. |
+- [Terms of Service](https://www.apache.org/licenses/)
+- [SDK](https://pypi.org/project/tika/)
+- [Features](undefined)
+- [Use Cases](undefined)
+- [Integrations](undefined)
 
 ## Maintainers
 
 **FN:** Kin Lane
-
 **Email:** info@apievangelist.com
