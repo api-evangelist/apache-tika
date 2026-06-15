@@ -1,0 +1,457 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Tika Server REST API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Server welcome page",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:9998/"
+      },
+      "docs": "Server welcome page"
+    },
+    {
+      "info": {
+        "name": "Tika identity",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:9998/tika"
+      },
+      "docs": "Tika identity"
+    },
+    {
+      "info": {
+        "name": "Extract content from a document",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/tika"
+      },
+      "docs": "Extract content from a document"
+    },
+    {
+      "info": {
+        "name": "Extract main content",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/tika/main"
+      },
+      "docs": "Extract main content"
+    },
+    {
+      "info": {
+        "name": "Extract plain text",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/tika/text"
+      },
+      "docs": "Extract plain text"
+    },
+    {
+      "info": {
+        "name": "Extract content via multipart form upload",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:9998/tika/form",
+        "body": {
+          "type": "multipart-form",
+          "data": []
+        }
+      },
+      "docs": "Extract content via multipart form upload"
+    },
+    {
+      "info": {
+        "name": "Metadata identity",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:9998/meta"
+      },
+      "docs": "Metadata identity"
+    },
+    {
+      "info": {
+        "name": "Extract document metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/meta"
+      },
+      "docs": "Extract document metadata"
+    },
+    {
+      "info": {
+        "name": "Get a metadata key (identity)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:9998/meta/:key",
+        "params": [
+          {
+            "name": "key",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a metadata key (identity)"
+    },
+    {
+      "info": {
+        "name": "Extract specific metadata key",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/meta/:key",
+        "params": [
+          {
+            "name": "key",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Extract specific metadata key"
+    },
+    {
+      "info": {
+        "name": "Extract metadata via multipart form upload",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:9998/meta/form",
+        "body": {
+          "type": "multipart-form",
+          "data": []
+        }
+      },
+      "docs": "Extract metadata via multipart form upload"
+    },
+    {
+      "info": {
+        "name": "Detect MIME type of an uploaded stream",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/detect/stream"
+      },
+      "docs": "Detect MIME type of an uploaded stream"
+    },
+    {
+      "info": {
+        "name": "Detect language of an uploaded stream (POST)",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:9998/language/stream"
+      },
+      "docs": "Detect language of an uploaded stream (POST)"
+    },
+    {
+      "info": {
+        "name": "Detect language of an uploaded stream",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/language/stream"
+      },
+      "docs": "Detect language of an uploaded stream"
+    },
+    {
+      "info": {
+        "name": "Detect language of a string (POST)",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:9998/language/string"
+      },
+      "docs": "Detect language of a string (POST)"
+    },
+    {
+      "info": {
+        "name": "Detect language of a string",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/language/string"
+      },
+      "docs": "Detect language of a string"
+    },
+    {
+      "info": {
+        "name": "Translate using a specific translator (POST)",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:9998/translate/all/:translator/:src/:dest",
+        "params": [
+          {
+            "name": "translator",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "src",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "dest",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Translate using a specific translator (POST)"
+    },
+    {
+      "info": {
+        "name": "Translate using a specific translator",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/translate/all/:translator/:src/:dest",
+        "params": [
+          {
+            "name": "translator",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "src",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "dest",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Translate using a specific translator"
+    },
+    {
+      "info": {
+        "name": "Translate using default translator (POST)",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:9998/translate/all/:src/:dest",
+        "params": [
+          {
+            "name": "src",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "dest",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Translate using default translator (POST)"
+    },
+    {
+      "info": {
+        "name": "Translate using default translator",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/translate/all/:src/:dest",
+        "params": [
+          {
+            "name": "src",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "dest",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Translate using default translator"
+    },
+    {
+      "info": {
+        "name": "Recursive metadata identity",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:9998/rmeta"
+      },
+      "docs": "Recursive metadata identity"
+    },
+    {
+      "info": {
+        "name": "Recursive metadata extraction",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/rmeta"
+      },
+      "docs": "Recursive metadata extraction"
+    },
+    {
+      "info": {
+        "name": "Recursive metadata with plain text",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/rmeta/text"
+      },
+      "docs": "Recursive metadata with plain text"
+    },
+    {
+      "info": {
+        "name": "Recursive metadata with HTML content",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/rmeta/html"
+      },
+      "docs": "Recursive metadata with HTML content"
+    },
+    {
+      "info": {
+        "name": "Recursive metadata, ignore content",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/rmeta/ignore"
+      },
+      "docs": "Recursive metadata, ignore content"
+    },
+    {
+      "info": {
+        "name": "Recursive metadata via multipart form upload",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:9998/rmeta/form",
+        "body": {
+          "type": "multipart-form",
+          "data": []
+        }
+      },
+      "docs": "Recursive metadata via multipart form upload"
+    },
+    {
+      "info": {
+        "name": "Unpack archive embedded resources",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/unpack"
+      },
+      "docs": "Unpack archive embedded resources"
+    },
+    {
+      "info": {
+        "name": "Unpack all embedded resources",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:9998/unpack/all"
+      },
+      "docs": "Unpack all embedded resources"
+    },
+    {
+      "info": {
+        "name": "Supported MIME types",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:9998/mime-types"
+      },
+      "docs": "Supported MIME types"
+    },
+    {
+      "info": {
+        "name": "Registered detectors",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:9998/detectors"
+      },
+      "docs": "Registered detectors"
+    },
+    {
+      "info": {
+        "name": "Registered parsers",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:9998/parsers"
+      },
+      "docs": "Registered parsers"
+    },
+    {
+      "info": {
+        "name": "Detailed parser information",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:9998/parsers/details"
+      },
+      "docs": "Detailed parser information"
+    },
+    {
+      "info": {
+        "name": "Server status",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:9998/status"
+      },
+      "docs": "Server status"
+    }
+  ],
+  "bundled": true
+}

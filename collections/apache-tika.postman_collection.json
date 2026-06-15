@@ -1,0 +1,2691 @@
+{
+  "item": [
+    {
+      "id": "d399127f-81ae-4f07-a9c8-5b9df65e4a1f",
+      "name": "Server welcome page",
+      "request": {
+        "name": "Server welcome page",
+        "description": {},
+        "url": {
+          "path": [
+            ""
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "b72ddf8f-404a-4a52-a30f-b74ef941b3ce",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "0301cf30-27c4-4f3f-9d45-774838b47cd7",
+      "name": "Tika identity",
+      "request": {
+        "name": "Tika identity",
+        "description": {},
+        "url": {
+          "path": [
+            "tika"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "e64a3e2a-432c-4748-b6da-6c3c9bf8a0d5",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "tika"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a796d66b-355b-4749-9ab8-0c142283a898",
+      "name": "Extract content from a document",
+      "request": {
+        "name": "Extract content from a document",
+        "description": {},
+        "url": {
+          "path": [
+            "tika"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<binary>"
+        }
+      },
+      "response": [
+        {
+          "id": "4d847311-01ec-476e-8d9c-b369cb5b8eef",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "tika"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "359c7d7b-8edf-4199-9f38-c2aad80c09bb",
+      "name": "Extract main content",
+      "request": {
+        "name": "Extract main content",
+        "description": {},
+        "url": {
+          "path": [
+            "tika",
+            "main"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<binary>"
+        }
+      },
+      "response": [
+        {
+          "id": "bdb80ce2-355f-4160-86bc-8e2bdcccb06a",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "tika",
+                "main"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a1dd9438-39ca-4502-91bf-7266a136a1f4",
+      "name": "Extract plain text",
+      "request": {
+        "name": "Extract plain text",
+        "description": {},
+        "url": {
+          "path": [
+            "tika",
+            "text"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<binary>"
+        }
+      },
+      "response": [
+        {
+          "id": "a5307028-1af4-47fe-aec2-d3fbdfd3f3e3",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "tika",
+                "text"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "368b5bf2-c4ae-483d-8b89-da4c2d4c1ec6",
+      "name": "Extract content via multipart form upload",
+      "request": {
+        "name": "Extract content via multipart form upload",
+        "description": {},
+        "url": {
+          "path": [
+            "tika",
+            "form"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "multipart/form-data"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "0",
+              "value": "<",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "1",
+              "value": "o",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "2",
+              "value": "b",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "3",
+              "value": "j",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "4",
+              "value": "e",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "5",
+              "value": "c",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "6",
+              "value": "t",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "7",
+              "value": ">",
+              "type": "text",
+              "description": ""
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "5ca1ae4d-a4e6-481d-acbe-f4f376d4f626",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "tika",
+                "form"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "0",
+                  "value": "<",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "1",
+                  "value": "o",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "2",
+                  "value": "b",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "3",
+                  "value": "j",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "4",
+                  "value": "e",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "5",
+                  "value": "c",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "6",
+                  "value": "t",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "7",
+                  "value": ">",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "d1052640-9c44-433d-99e1-c5baf2eaa2d3",
+      "name": "Metadata identity",
+      "request": {
+        "name": "Metadata identity",
+        "description": {},
+        "url": {
+          "path": [
+            "meta"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "a3b68fa9-d291-43c7-ab7a-21bd6454daaa",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "meta"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a6137bf8-2732-4003-9713-8b3b8657f160",
+      "name": "Extract document metadata",
+      "request": {
+        "name": "Extract document metadata",
+        "description": {},
+        "url": {
+          "path": [
+            "meta"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<binary>"
+        }
+      },
+      "response": [
+        {
+          "id": "e1322c53-066c-4483-a13f-97601d57cf51",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "meta"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "c60474c8-4210-4a7b-8f39-41c23cf4e776",
+      "name": "Get a metadata key (identity)",
+      "request": {
+        "name": "Get a metadata key (identity)",
+        "description": {},
+        "url": {
+          "path": [
+            "meta",
+            ":key"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "key",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "2edecc02-5aec-4867-9faf-5965418e8884",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "meta",
+                ":key"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "key",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "2aaae707-bc0c-490d-a2b7-c43a73ccd2ae",
+      "name": "Extract specific metadata key",
+      "request": {
+        "name": "Extract specific metadata key",
+        "description": {},
+        "url": {
+          "path": [
+            "meta",
+            ":key"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "key",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<binary>"
+        }
+      },
+      "response": [
+        {
+          "id": "0df17c57-4bff-4d48-839f-fb9fd6cf88af",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "meta",
+                ":key"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "key",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a18783c9-62db-4a6b-bc5f-7c303ea91f71",
+      "name": "Extract metadata via multipart form upload",
+      "request": {
+        "name": "Extract metadata via multipart form upload",
+        "description": {},
+        "url": {
+          "path": [
+            "meta",
+            "form"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "multipart/form-data"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "0",
+              "value": "<",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "1",
+              "value": "o",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "2",
+              "value": "b",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "3",
+              "value": "j",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "4",
+              "value": "e",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "5",
+              "value": "c",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "6",
+              "value": "t",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "7",
+              "value": ">",
+              "type": "text",
+              "description": ""
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "5cb92a49-3b1f-4cb5-a1b7-b41311aef219",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "meta",
+                "form"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "0",
+                  "value": "<",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "1",
+                  "value": "o",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "2",
+                  "value": "b",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "3",
+                  "value": "j",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "4",
+                  "value": "e",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "5",
+                  "value": "c",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "6",
+                  "value": "t",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "7",
+                  "value": ">",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "4e2f11ed-3b98-432e-85fa-a05a702d36f2",
+      "name": "Detect MIME type of an uploaded stream",
+      "request": {
+        "name": "Detect MIME type of an uploaded stream",
+        "description": {},
+        "url": {
+          "path": [
+            "detect",
+            "stream"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<binary>"
+        }
+      },
+      "response": [
+        {
+          "id": "6b1c75ea-4b71-4aed-a294-1b2bc63475d4",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "detect",
+                "stream"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "409b20b8-11b1-4c17-9e57-ed196a2a0519",
+      "name": "Detect language of an uploaded stream",
+      "request": {
+        "name": "Detect language of an uploaded stream",
+        "description": {},
+        "url": {
+          "path": [
+            "language",
+            "stream"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<binary>"
+        }
+      },
+      "response": [
+        {
+          "id": "c7c498dd-468c-48dc-b81b-7ce034d115c1",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "language",
+                "stream"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "896c8be3-4668-46c5-bd8f-d55f16719c37",
+      "name": "Detect language of an uploaded stream (POST)",
+      "request": {
+        "name": "Detect language of an uploaded stream (POST)",
+        "description": {},
+        "url": {
+          "path": [
+            "language",
+            "stream"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<binary>"
+        }
+      },
+      "response": [
+        {
+          "id": "e1a84a1a-c2a5-4877-99a3-6b0e773abc14",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "language",
+                "stream"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "5814f337-1613-4a51-8c77-3581910b956a",
+      "name": "Detect language of a string",
+      "request": {
+        "name": "Detect language of a string",
+        "description": {},
+        "url": {
+          "path": [
+            "language",
+            "string"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/plain"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<string>"
+        }
+      },
+      "response": [
+        {
+          "id": "1d43e43e-f944-413d-9173-4ff5f5d47dcb",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "language",
+                "string"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "<string>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "fce8ca1d-9fcd-4a9a-9df8-1b246732021e",
+      "name": "Detect language of a string (POST)",
+      "request": {
+        "name": "Detect language of a string (POST)",
+        "description": {},
+        "url": {
+          "path": [
+            "language",
+            "string"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/plain"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<string>"
+        }
+      },
+      "response": [
+        {
+          "id": "f2068ffc-c27b-440a-ad40-93b68142bbe9",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "language",
+                "string"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<string>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "fe474fc8-4d83-45a3-9ba2-b049ea6c254a",
+      "name": "Translate using a specific translator",
+      "request": {
+        "name": "Translate using a specific translator",
+        "description": {},
+        "url": {
+          "path": [
+            "translate",
+            "all",
+            ":translator",
+            ":src",
+            ":dest"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "translator",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "src",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "dest",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "PUT",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "89a7c916-39fa-4b59-92da-3c471421b534",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "translate",
+                "all",
+                ":translator",
+                ":src",
+                ":dest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "translator",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "src",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "dest",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "PUT",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "fcc42bc3-9683-46a1-b581-c4ca7d4ea253",
+      "name": "Translate using a specific translator (POST)",
+      "request": {
+        "name": "Translate using a specific translator (POST)",
+        "description": {},
+        "url": {
+          "path": [
+            "translate",
+            "all",
+            ":translator",
+            ":src",
+            ":dest"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "translator",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "src",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "dest",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "2f895949-8078-41c5-85dc-bd63c08b9464",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "translate",
+                "all",
+                ":translator",
+                ":src",
+                ":dest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "translator",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "src",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "dest",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a02c7ab9-6518-4292-9fdf-6158da9a3a16",
+      "name": "Translate using default translator",
+      "request": {
+        "name": "Translate using default translator",
+        "description": {},
+        "url": {
+          "path": [
+            "translate",
+            "all",
+            ":src",
+            ":dest"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "src",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "dest",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "PUT",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "63e9713b-833b-42ba-b986-6d89952bc5f1",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "translate",
+                "all",
+                ":src",
+                ":dest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "src",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "dest",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "PUT",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "17c04901-bc16-4b51-9457-074f79053b62",
+      "name": "Translate using default translator (POST)",
+      "request": {
+        "name": "Translate using default translator (POST)",
+        "description": {},
+        "url": {
+          "path": [
+            "translate",
+            "all",
+            ":src",
+            ":dest"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "src",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "dest",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "33839e81-757e-4627-b585-4880fccaa471",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "translate",
+                "all",
+                ":src",
+                ":dest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "src",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "dest",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "1bcbd86a-618d-4521-9107-a96372c37253",
+      "name": "Recursive metadata identity",
+      "request": {
+        "name": "Recursive metadata identity",
+        "description": {},
+        "url": {
+          "path": [
+            "rmeta"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "4d136232-62c3-49f5-8616-3bcd96ffaafb",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "rmeta"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "cd2e2769-0e7f-44bc-bc40-ae3ebc4e4a67",
+      "name": "Recursive metadata extraction",
+      "request": {
+        "name": "Recursive metadata extraction",
+        "description": {},
+        "url": {
+          "path": [
+            "rmeta"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<binary>"
+        }
+      },
+      "response": [
+        {
+          "id": "3557cf88-5845-4a65-a23c-d24dbbbfebb4",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "rmeta"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "dfcddd87-f9ed-4a79-a123-c87a6ba3bc71",
+      "name": "Recursive metadata with plain text",
+      "request": {
+        "name": "Recursive metadata with plain text",
+        "description": {},
+        "url": {
+          "path": [
+            "rmeta",
+            "text"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<binary>"
+        }
+      },
+      "response": [
+        {
+          "id": "b5c5c2d7-9e7c-468b-a9df-6aca1f634c31",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "rmeta",
+                "text"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "55869c1b-bbb4-4273-bb06-9b481d04cad8",
+      "name": "Recursive metadata with HTML content",
+      "request": {
+        "name": "Recursive metadata with HTML content",
+        "description": {},
+        "url": {
+          "path": [
+            "rmeta",
+            "html"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<binary>"
+        }
+      },
+      "response": [
+        {
+          "id": "b9d83551-77b4-4129-8d06-0d3f19db2a84",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "rmeta",
+                "html"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "cc91d16d-2f8d-450f-88c7-30e3e8ebfc3a",
+      "name": "Recursive metadata, ignore content",
+      "request": {
+        "name": "Recursive metadata, ignore content",
+        "description": {},
+        "url": {
+          "path": [
+            "rmeta",
+            "ignore"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<binary>"
+        }
+      },
+      "response": [
+        {
+          "id": "5c86a24e-e674-4cec-b83d-e0223cb28c0b",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "rmeta",
+                "ignore"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "4e1883ee-959c-455a-8cfa-0cc7c661a140",
+      "name": "Recursive metadata via multipart form upload",
+      "request": {
+        "name": "Recursive metadata via multipart form upload",
+        "description": {},
+        "url": {
+          "path": [
+            "rmeta",
+            "form"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "multipart/form-data"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "0",
+              "value": "<",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "1",
+              "value": "o",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "2",
+              "value": "b",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "3",
+              "value": "j",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "4",
+              "value": "e",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "5",
+              "value": "c",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "6",
+              "value": "t",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "7",
+              "value": ">",
+              "type": "text",
+              "description": ""
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "498d6d02-b8bb-4e2c-9625-caeea3d5b840",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "rmeta",
+                "form"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "0",
+                  "value": "<",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "1",
+                  "value": "o",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "2",
+                  "value": "b",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "3",
+                  "value": "j",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "4",
+                  "value": "e",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "5",
+                  "value": "c",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "6",
+                  "value": "t",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "7",
+                  "value": ">",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "2ac5894d-2a3d-46fa-8789-7757926df7a7",
+      "name": "Unpack archive embedded resources",
+      "request": {
+        "name": "Unpack archive embedded resources",
+        "description": {},
+        "url": {
+          "path": [
+            "unpack"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<binary>"
+        }
+      },
+      "response": [
+        {
+          "id": "36e753dc-3127-4f1f-ac9e-d0755a3509fa",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "unpack"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "9dd6650d-7406-4eca-935f-dac1c548c8a7",
+      "name": "Unpack all embedded resources",
+      "request": {
+        "name": "Unpack all embedded resources",
+        "description": {},
+        "url": {
+          "path": [
+            "unpack",
+            "all"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<binary>"
+        }
+      },
+      "response": [
+        {
+          "id": "ecab5554-d13a-4eeb-bf9c-517f468ea4ee",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "unpack",
+                "all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "f79c61e5-1937-4b0a-be94-ba01d0569ae1",
+      "name": "Supported MIME types",
+      "request": {
+        "name": "Supported MIME types",
+        "description": {},
+        "url": {
+          "path": [
+            "mime-types"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "7d10b1f6-a06a-4029-aa2f-1ba4d53b60c9",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "mime-types"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "7b68b24c-1c1f-4ab4-86d6-08424543394e",
+      "name": "Registered detectors",
+      "request": {
+        "name": "Registered detectors",
+        "description": {},
+        "url": {
+          "path": [
+            "detectors"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "76e33cf2-5383-4f38-894e-2122bd60e03f",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "detectors"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "04155099-cbe0-4dfd-80e0-27c409225725",
+      "name": "Registered parsers",
+      "request": {
+        "name": "Registered parsers",
+        "description": {},
+        "url": {
+          "path": [
+            "parsers"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "f603501e-fb01-4041-aa4b-dd4444abe3af",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "parsers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a2862a56-a599-42bb-a378-0254b4e01a59",
+      "name": "Detailed parser information",
+      "request": {
+        "name": "Detailed parser information",
+        "description": {},
+        "url": {
+          "path": [
+            "parsers",
+            "details"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "e4ef6d9e-0705-450e-8386-49f77f56940c",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "parsers",
+                "details"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "ef7f4421-4cc0-4eea-be8c-faf732176ffc",
+      "name": "Server status",
+      "request": {
+        "name": "Server status",
+        "description": {},
+        "url": {
+          "path": [
+            "status"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "73328057-3964-4359-b764-28a31d1cdfa3",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:9998",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3d12c372-153f-43fd-88b3-40194209bc10",
+    "name": "Apache Tika Server REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI for the Apache Tika Server REST API providing content and metadata extraction, language detection, translation, recursive metadata, archive unpacking, and server status endpoints.",
+      "type": "text/plain"
+    }
+  }
+}
