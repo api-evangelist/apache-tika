@@ -61,7 +61,7 @@ apis:
         url: https://tika.apache.org/
       - type: APIReference
         url: https://tika.apache.org/1.28/api/
-      - type: SDK
+      - type: SDKs
         url: https://search.maven.org/search?q=org.apache.tika
         title: Maven Java SDK
 common:
@@ -79,7 +79,7 @@ common:
     url: https://cwiki.apache.org/confluence/display/TIKA/MailingLists
   - type: TermsOfService
     url: https://www.apache.org/licenses/
-  - type: SDK
+  - type: SDKs
     url: https://pypi.org/project/tika/
     title: Python Tika Package
   - type: Features
