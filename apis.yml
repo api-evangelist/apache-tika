@@ -65,6 +65,10 @@ apis:
         url: https://search.maven.org/search?q=org.apache.tika
         title: Maven Java SDK
 common:
+  - type: VulnerabilityDisclosure
+    url: security/apache-tika-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/apache-tika-domain-security.yml
   - type: GitHubRepository
     url: https://github.com/apache/tika
   - type: Documentation
