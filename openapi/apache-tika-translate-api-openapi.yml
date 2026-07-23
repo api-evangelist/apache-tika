@@ -1,0 +1,97 @@
+openapi: 3.1.0
+info:
+  title: Apache Tika Server REST Apache Tika Server REST API Translate API
+  version: '1.0'
+  description: Minimal OpenAPI for the Apache Tika Server REST API providing content and metadata extraction, language detection, translation, recursive metadata, archive unpacking, and server status endpoints.
+servers:
+- url: http://localhost:9998
+  description: Tika Server
+tags:
+- name: Translate
+paths:
+  /translate/all/{translator}/{src}/{dest}:
+    put:
+      summary: Translate using a specific translator
+      parameters:
+      - name: translator
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: src
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: dest
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Translate
+    post:
+      summary: Translate using a specific translator (POST)
+      parameters:
+      - name: translator
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: src
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: dest
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Translate
+  /translate/all/{src}/{dest}:
+    put:
+      summary: Translate using default translator
+      parameters:
+      - name: src
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: dest
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Translate
+    post:
+      summary: Translate using default translator (POST)
+      parameters:
+      - name: src
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: dest
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Translate
+x-generated-from: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+x-generated-by: claude-crawl-2026-05-08

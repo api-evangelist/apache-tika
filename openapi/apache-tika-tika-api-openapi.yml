@@ -1,0 +1,75 @@
+openapi: 3.1.0
+info:
+  title: Apache Server REST Apache Server REST API Tika API
+  version: '1.0'
+  description: Minimal OpenAPI for the Apache Tika Server REST API providing content and metadata extraction, language detection, translation, recursive metadata, archive unpacking, and server status endpoints.
+servers:
+- url: http://localhost:9998
+  description: Tika Server
+tags:
+- name: Tika
+paths:
+  /tika:
+    get:
+      summary: Tika identity
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Tika
+    put:
+      summary: Extract content from a document
+      requestBody:
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Tika
+  /tika/main:
+    put:
+      summary: Extract main content
+      requestBody:
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Tika
+  /tika/text:
+    put:
+      summary: Extract plain text
+      requestBody:
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Tika
+  /tika/form:
+    post:
+      summary: Extract content via multipart form upload
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Tika
+x-generated-from: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+x-generated-by: claude-crawl-2026-05-08

@@ -1,0 +1,89 @@
+openapi: 3.1.0
+info:
+  title: Apache Tika Server REST Apache Tika Server REST API Rmeta API
+  version: '1.0'
+  description: Minimal OpenAPI for the Apache Tika Server REST API providing content and metadata extraction, language detection, translation, recursive metadata, archive unpacking, and server status endpoints.
+servers:
+- url: http://localhost:9998
+  description: Tika Server
+tags:
+- name: Rmeta
+paths:
+  /rmeta:
+    get:
+      summary: Recursive metadata identity
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Rmeta
+    put:
+      summary: Recursive metadata extraction
+      requestBody:
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Rmeta
+  /rmeta/text:
+    put:
+      summary: Recursive metadata with plain text
+      requestBody:
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Rmeta
+  /rmeta/html:
+    put:
+      summary: Recursive metadata with HTML content
+      requestBody:
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Rmeta
+  /rmeta/ignore:
+    put:
+      summary: Recursive metadata, ignore content
+      requestBody:
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Rmeta
+  /rmeta/form:
+    post:
+      summary: Recursive metadata via multipart form upload
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Rmeta
+x-generated-from: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+x-generated-by: claude-crawl-2026-05-08

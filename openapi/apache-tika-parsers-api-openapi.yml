@@ -1,0 +1,29 @@
+openapi: 3.1.0
+info:
+  title: Apache Tika Server REST Apache Tika Server REST API Parsers API
+  version: '1.0'
+  description: Minimal OpenAPI for the Apache Tika Server REST API providing content and metadata extraction, language detection, translation, recursive metadata, archive unpacking, and server status endpoints.
+servers:
+- url: http://localhost:9998
+  description: Tika Server
+tags:
+- name: Parsers
+paths:
+  /parsers:
+    get:
+      summary: Registered parsers
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Parsers
+  /parsers/details:
+    get:
+      summary: Detailed parser information
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Parsers
+x-generated-from: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+x-generated-by: claude-crawl-2026-05-08

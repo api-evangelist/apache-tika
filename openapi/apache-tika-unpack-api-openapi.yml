@@ -1,0 +1,41 @@
+openapi: 3.1.0
+info:
+  title: Apache Tika Server REST Apache Tika Server REST API Unpack API
+  version: '1.0'
+  description: Minimal OpenAPI for the Apache Tika Server REST API providing content and metadata extraction, language detection, translation, recursive metadata, archive unpacking, and server status endpoints.
+servers:
+- url: http://localhost:9998
+  description: Tika Server
+tags:
+- name: Unpack
+paths:
+  /unpack:
+    put:
+      summary: Unpack archive embedded resources
+      requestBody:
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Unpack
+  /unpack/all:
+    put:
+      summary: Unpack all embedded resources
+      requestBody:
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Unpack
+x-generated-from: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+x-generated-by: claude-crawl-2026-05-08

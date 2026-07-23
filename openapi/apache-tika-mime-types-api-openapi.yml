@@ -1,0 +1,21 @@
+openapi: 3.1.0
+info:
+  title: Apache Tika Server REST Apache Tika Server REST API Mime Types API
+  version: '1.0'
+  description: Minimal OpenAPI for the Apache Tika Server REST API providing content and metadata extraction, language detection, translation, recursive metadata, archive unpacking, and server status endpoints.
+servers:
+- url: http://localhost:9998
+  description: Tika Server
+tags:
+- name: Mime Types
+paths:
+  /mime-types:
+    get:
+      summary: Supported MIME types
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Mime Types
+x-generated-from: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+x-generated-by: claude-crawl-2026-05-08
