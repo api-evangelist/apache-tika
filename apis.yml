@@ -7,9 +7,21 @@ description: >-
   Apache Nutch, and many other systems for content extraction and indexing. It is maintained by the Apache Software
   Foundation.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apache-tika.png
 tags:
   - Content Extraction
   - Document Processing
@@ -21,49 +33,185 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/apache-tika/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: apache-tika:apache-tika-rest-api
-    name: Apache Tika REST API
-    description: >-
-      The Tika Server REST API provides HTTP endpoints for content type detection, text extraction, metadata extraction,
-      and language detection from uploaded documents. Key endpoints include: PUT /tika for full text extraction, PUT
-      /meta for metadata-only extraction, PUT /detect/stream for MIME type detection, PUT /language/stream for language
-      detection, and GET /parsers for listing available parsers. The server supports streaming large files and returns
-      JSON or plain text responses.
-    humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
-    tags:
-      - REST
-      - Content Extraction
-      - Metadata
-      - Document Processing
-      - Text Extraction
-    properties:
-      - type: Documentation
-        url: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
-      - type: Documentation
-        url: https://tika.apache.org/
-      - url: openapi/apache-tika-openapi.yml
-        type: OpenAPI
-  - aid: apache-tika:apache-tika-java-api
-    name: Apache Tika Java API
-    description: >-
-      The Tika Java API provides the AutoDetectParser for automatic format detection and parsing, Metadata class for
-      reading extracted metadata fields, ContentHandler for streaming SAX-based text extraction, and Detector for MIME
-      type identification. The facade Tika class provides a simple one-line API for text extraction from any supported
-      format.
-    humanURL: https://tika.apache.org/
-    tags:
-      - Java
-      - Content Extraction
-      - Parser
-      - Metadata
-    properties:
-      - type: Documentation
-        url: https://tika.apache.org/
-      - type: APIReference
-        url: https://tika.apache.org/1.28/api/
-      - type: SDKs
-        url: https://search.maven.org/search?q=org.apache.tika
-        title: Maven Java SDK
+- aid: apache-tika:apache-tika-java-api
+  name: Apache Tika Java API
+  description: >-
+    The Tika Java API provides the AutoDetectParser for automatic format detection and parsing, Metadata
+    class for reading extracted metadata fields, ContentHandler for streaming SAX-based text extraction,
+    and Detector for MIME type identification. The facade Tika class provides a simple one-line API for
+    text extraction from any supported format.
+  humanURL: https://tika.apache.org/
+  tags:
+  - Java
+  - Content Extraction
+  - Parser
+  - Metadata
+  properties:
+  - type: Documentation
+    url: https://tika.apache.org/
+  - type: APIReference
+    url: https://tika.apache.org/1.28/api/
+  - type: SDKs
+    url: https://search.maven.org/search?q=org.apache.tika
+    title: Maven Java SDK
+- aid: apache-tika:apache-tika-apache-tika-server-rest-api-api
+  name: Apache Tika Apache Tika Server REST API API
+  description: >-
+    The Apache Tika Server REST API API from Apache Tika — 1 operation(s) for apache tika server rest
+    api.
+  humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  tags:
+  - Apache Tika Server REST API
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-tika-apache-tika-server-rest-api-api-openapi.yml
+  - type: Documentation
+    url: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  - type: Documentation
+    url: https://tika.apache.org/
+- aid: apache-tika:apache-tika-detect-api
+  name: Apache Tika Detect API
+  description: The Detect API from Apache Tika — 1 operation(s) for detect.
+  humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  tags:
+  - Detect
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-tika-detect-api-openapi.yml
+  - type: Documentation
+    url: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  - type: Documentation
+    url: https://tika.apache.org/
+- aid: apache-tika:apache-tika-detectors-api
+  name: Apache Tika Detectors API
+  description: The Detectors API from Apache Tika — 1 operation(s) for detectors.
+  humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  tags:
+  - Detectors
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-tika-detectors-api-openapi.yml
+  - type: Documentation
+    url: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  - type: Documentation
+    url: https://tika.apache.org/
+- aid: apache-tika:apache-tika-language-api
+  name: Apache Tika Language API
+  description: The Language API from Apache Tika — 2 operation(s) for language.
+  humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  tags:
+  - Language
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-tika-language-api-openapi.yml
+  - type: Documentation
+    url: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  - type: Documentation
+    url: https://tika.apache.org/
+- aid: apache-tika:apache-tika-meta-api
+  name: Apache Tika Meta API
+  description: The Meta API from Apache Tika — 3 operation(s) for meta.
+  humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  tags:
+  - Meta
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-tika-meta-api-openapi.yml
+  - type: Documentation
+    url: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  - type: Documentation
+    url: https://tika.apache.org/
+- aid: apache-tika:apache-tika-mime-types-api
+  name: Apache Tika Mime Types API
+  description: The Mime Types API from Apache Tika — 1 operation(s) for mime types.
+  humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  tags:
+  - Mime Types
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-tika-mime-types-api-openapi.yml
+  - type: Documentation
+    url: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  - type: Documentation
+    url: https://tika.apache.org/
+- aid: apache-tika:apache-tika-parsers-api
+  name: Apache Tika Parsers API
+  description: The Parsers API from Apache Tika — 2 operation(s) for parsers.
+  humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  tags:
+  - Parsers
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-tika-parsers-api-openapi.yml
+  - type: Documentation
+    url: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  - type: Documentation
+    url: https://tika.apache.org/
+- aid: apache-tika:apache-tika-rmeta-api
+  name: Apache Tika Rmeta API
+  description: The Rmeta API from Apache Tika — 5 operation(s) for rmeta.
+  humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  tags:
+  - Rmeta
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-tika-rmeta-api-openapi.yml
+  - type: Documentation
+    url: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  - type: Documentation
+    url: https://tika.apache.org/
+- aid: apache-tika:apache-tika-status-api
+  name: Apache Tika Status API
+  description: The Status API from Apache Tika — 1 operation(s) for status.
+  humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  tags:
+  - Status
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-tika-status-api-openapi.yml
+  - type: Documentation
+    url: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  - type: Documentation
+    url: https://tika.apache.org/
+- aid: apache-tika:apache-tika-tika-api
+  name: Apache Tika Tika API
+  description: The Tika API from Apache Tika — 4 operation(s) for tika.
+  humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  tags:
+  - Tika
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-tika-tika-api-openapi.yml
+  - type: Documentation
+    url: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  - type: Documentation
+    url: https://tika.apache.org/
+- aid: apache-tika:apache-tika-translate-api
+  name: Apache Tika Translate API
+  description: The Translate API from Apache Tika — 2 operation(s) for translate.
+  humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  tags:
+  - Translate
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-tika-translate-api-openapi.yml
+  - type: Documentation
+    url: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  - type: Documentation
+    url: https://tika.apache.org/
+- aid: apache-tika:apache-tika-unpack-api
+  name: Apache Tika Unpack API
+  description: The Unpack API from Apache Tika — 2 operation(s) for unpack.
+  humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  tags:
+  - Unpack
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-tika-unpack-api-openapi.yml
+  - type: Documentation
+    url: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
+  - type: Documentation
+    url: https://tika.apache.org/
 common:
   - type: AgenticAccess
     url: agentic-access/apache-tika-agentic-access.yml
