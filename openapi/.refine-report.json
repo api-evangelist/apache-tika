@@ -1,0 +1,36 @@
+{
+  "provider": "apache-tika",
+  "sources": [
+    "apache-tika-apache-tika-server-rest-api-api-openapi.yml",
+    "apache-tika-detect-api-openapi.yml",
+    "apache-tika-detectors-api-openapi.yml",
+    "apache-tika-language-api-openapi.yml",
+    "apache-tika-meta-api-openapi.yml",
+    "apache-tika-mime-types-api-openapi.yml",
+    "apache-tika-parsers-api-openapi.yml",
+    "apache-tika-rmeta-api-openapi.yml",
+    "apache-tika-status-api-openapi.yml",
+    "apache-tika-tika-api-openapi.yml",
+    "apache-tika-translate-api-openapi.yml",
+    "apache-tika-unpack-api-openapi.yml"
+  ],
+  "outputs": [
+    "apache-tika-apache-tika-server-rest-api-api-openapi.yml",
+    "apache-tika-detect-api-openapi.yml",
+    "apache-tika-detectors-api-openapi.yml",
+    "apache-tika-language-api-openapi.yml",
+    "apache-tika-meta-api-openapi.yml",
+    "apache-tika-mime-types-api-openapi.yml",
+    "apache-tika-parsers-api-openapi.yml",
+    "apache-tika-rmeta-api-openapi.yml",
+    "apache-tika-status-api-openapi.yml",
+    "apache-tika-tika-api-openapi.yml",
+    "apache-tika-translate-api-openapi.yml",
+    "apache-tika-unpack-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
