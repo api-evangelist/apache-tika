@@ -1,0 +1,87 @@
+{
+  "item": [
+    {
+      "id": "3d0baee4-59c4-4743-af4e-dc2e3847121d",
+      "name": "Apache Tika Server REST API",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6e5e6ee6-c9c5-4d6e-88b9-c7fc2b631c33",
+          "name": "Server welcome page",
+          "request": {
+            "name": "Server welcome page",
+            "description": {},
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a1b3f6d7-bee1-4518-b43f-17d7054d5aea",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:9998",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b2f6e3af-d956-4381-a095-81f5b44ad6e5",
+    "name": "Apache Tika Server REST Apache Tika Server REST API API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI for the Apache Tika Server REST API providing content and metadata extraction, language detection, translation, recursive metadata, archive unpacking, and server status endpoints.",
+      "type": "text/plain"
+    }
+  }
+}

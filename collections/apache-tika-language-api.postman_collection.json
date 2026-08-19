@@ -1,0 +1,312 @@
+{
+  "item": [
+    {
+      "id": "1b4ecdad-0104-4bd7-8cff-079307d15369",
+      "name": "Language",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "968a5e37-b9ef-449d-a346-d518896bacc7",
+          "name": "Detect language of an uploaded stream",
+          "request": {
+            "name": "Detect language of an uploaded stream",
+            "description": {},
+            "url": {
+              "path": [
+                "language",
+                "stream"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "response": [
+            {
+              "id": "29a6c131-73c2-415a-8acb-9f97c27d194d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "language",
+                    "stream"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<binary>"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5290f87e-b9cc-4546-bf83-8f8b72b0c174",
+          "name": "Detect language of an uploaded stream (POST)",
+          "request": {
+            "name": "Detect language of an uploaded stream (POST)",
+            "description": {},
+            "url": {
+              "path": [
+                "language",
+                "stream"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "response": [
+            {
+              "id": "675b720a-8c91-489f-9d28-dd0db5a66341",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "language",
+                    "stream"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<binary>"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "69f0b9f1-9453-41de-b049-8196c7248cdd",
+          "name": "Detect language of a string",
+          "request": {
+            "name": "Detect language of a string",
+            "description": {},
+            "url": {
+              "path": [
+                "language",
+                "string"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/plain"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<string>"
+            }
+          },
+          "response": [
+            {
+              "id": "5ecb52c0-c4a0-42c7-ad08-e8abe2ba4dae",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "language",
+                    "string"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<string>"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c9bbc6e1-3af3-4d57-89e7-b85817c1fc58",
+          "name": "Detect language of a string (POST)",
+          "request": {
+            "name": "Detect language of a string (POST)",
+            "description": {},
+            "url": {
+              "path": [
+                "language",
+                "string"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/plain"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<string>"
+            }
+          },
+          "response": [
+            {
+              "id": "3bb7654f-04e0-4b5d-af6a-03d5d19964c5",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "language",
+                    "string"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<string>"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:9998",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a249479c-11d8-4d03-b02a-17a07a2b918d",
+    "name": "Apache Tika Server REST Apache Tika Server REST API Language API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI for the Apache Tika Server REST API providing content and metadata extraction, language detection, translation, recursive metadata, archive unpacking, and server status endpoints.",
+      "type": "text/plain"
+    }
+  }
+}

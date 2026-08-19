@@ -1,0 +1,120 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Tika Server REST Apache Tika Server REST API Translate API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Translate",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Translate using a specific translator (POST)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:9998/translate/all/:translator/:src/:dest",
+            "params": [
+              {
+                "name": "translator",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "src",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dest",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Translate using a specific translator (POST)"
+        },
+        {
+          "info": {
+            "name": "Translate using a specific translator",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:9998/translate/all/:translator/:src/:dest",
+            "params": [
+              {
+                "name": "translator",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "src",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dest",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Translate using a specific translator"
+        },
+        {
+          "info": {
+            "name": "Translate using default translator (POST)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:9998/translate/all/:src/:dest",
+            "params": [
+              {
+                "name": "src",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dest",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Translate using default translator (POST)"
+        },
+        {
+          "info": {
+            "name": "Translate using default translator",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:9998/translate/all/:src/:dest",
+            "params": [
+              {
+                "name": "src",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dest",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Translate using default translator"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

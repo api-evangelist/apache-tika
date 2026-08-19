@@ -1,0 +1,102 @@
+{
+  "item": [
+    {
+      "id": "1ec5cc6c-12e8-475c-9d3c-11d417f83560",
+      "name": "Detect",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f208f862-704a-4274-b0d2-46d1620b36e0",
+          "name": "Detect MIME type of an uploaded stream",
+          "request": {
+            "name": "Detect MIME type of an uploaded stream",
+            "description": {},
+            "url": {
+              "path": [
+                "detect",
+                "stream"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "response": [
+            {
+              "id": "301d2ec2-9424-43ba-acc0-6574a07fa27a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "detect",
+                    "stream"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<binary>"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:9998",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7574f1ff-9cce-47d5-9625-b7f650c84ee3",
+    "name": "Apache Tika Server REST Apache Tika Server REST API Detect API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI for the Apache Tika Server REST API providing content and metadata extraction, language detection, translation, recursive metadata, archive unpacking, and server status endpoints.",
+      "type": "text/plain"
+    }
+  }
+}

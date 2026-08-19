@@ -1,0 +1,170 @@
+{
+  "item": [
+    {
+      "id": "f53a8f37-f48a-4d74-8a7f-b6f2a0ed5eb2",
+      "name": "Unpack",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8dd41a41-d0f4-4784-a38c-4f555d979c3b",
+          "name": "Unpack archive embedded resources",
+          "request": {
+            "name": "Unpack archive embedded resources",
+            "description": {},
+            "url": {
+              "path": [
+                "unpack"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "response": [
+            {
+              "id": "bccfce98-7f7f-4fea-8de1-40bbd5dc84bb",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "unpack"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<binary>"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3f99b91d-afce-463c-9716-37c80a77b0bd",
+          "name": "Unpack all embedded resources",
+          "request": {
+            "name": "Unpack all embedded resources",
+            "description": {},
+            "url": {
+              "path": [
+                "unpack",
+                "all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "response": [
+            {
+              "id": "a0af01b5-be5d-4e49-a3d4-dc516d578cdc",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "unpack",
+                    "all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<binary>"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:9998",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "538cd33c-62ba-40e9-a2e4-34c3b908a553",
+    "name": "Apache Tika Server REST Apache Tika Server REST API Unpack API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI for the Apache Tika Server REST API providing content and metadata extraction, language detection, translation, recursive metadata, archive unpacking, and server status endpoints.",
+      "type": "text/plain"
+    }
+  }
+}

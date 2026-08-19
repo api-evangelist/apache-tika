@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Tika Server REST Apache Tika Server REST API Parsers API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Parsers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Registered parsers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:9998/parsers"
+          },
+          "docs": "Registered parsers"
+        },
+        {
+          "info": {
+            "name": "Detailed parser information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:9998/parsers/details"
+          },
+          "docs": "Detailed parser information"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

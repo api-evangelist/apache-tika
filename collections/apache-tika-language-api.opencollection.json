@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Tika Server REST Apache Tika Server REST API Language API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Language",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Detect language of an uploaded stream (POST)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:9998/language/stream"
+          },
+          "docs": "Detect language of an uploaded stream (POST)"
+        },
+        {
+          "info": {
+            "name": "Detect language of an uploaded stream",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:9998/language/stream"
+          },
+          "docs": "Detect language of an uploaded stream"
+        },
+        {
+          "info": {
+            "name": "Detect language of a string (POST)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:9998/language/string"
+          },
+          "docs": "Detect language of a string (POST)"
+        },
+        {
+          "info": {
+            "name": "Detect language of a string",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:9998/language/string"
+          },
+          "docs": "Detect language of a string"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Tika Server REST Apache Tika Server REST API Detectors API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Detectors",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Registered detectors",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:9998/detectors"
+          },
+          "docs": "Registered detectors"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

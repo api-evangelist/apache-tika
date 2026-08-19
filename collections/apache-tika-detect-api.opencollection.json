@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Tika Server REST Apache Tika Server REST API Detect API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Detect",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Detect MIME type of an uploaded stream",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:9998/detect/stream"
+          },
+          "docs": "Detect MIME type of an uploaded stream"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

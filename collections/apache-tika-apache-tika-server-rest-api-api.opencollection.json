@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Tika Server REST Apache Tika Server REST API API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Apache Tika Server REST API",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Server welcome page",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:9998/"
+          },
+          "docs": "Server welcome page"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

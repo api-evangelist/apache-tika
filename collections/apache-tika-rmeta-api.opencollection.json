@@ -1,0 +1,88 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Tika Server REST Apache Tika Server REST API Rmeta API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Rmeta",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Recursive metadata identity",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:9998/rmeta"
+          },
+          "docs": "Recursive metadata identity"
+        },
+        {
+          "info": {
+            "name": "Recursive metadata extraction",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:9998/rmeta"
+          },
+          "docs": "Recursive metadata extraction"
+        },
+        {
+          "info": {
+            "name": "Recursive metadata with plain text",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:9998/rmeta/text"
+          },
+          "docs": "Recursive metadata with plain text"
+        },
+        {
+          "info": {
+            "name": "Recursive metadata with HTML content",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:9998/rmeta/html"
+          },
+          "docs": "Recursive metadata with HTML content"
+        },
+        {
+          "info": {
+            "name": "Recursive metadata, ignore content",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:9998/rmeta/ignore"
+          },
+          "docs": "Recursive metadata, ignore content"
+        },
+        {
+          "info": {
+            "name": "Recursive metadata via multipart form upload",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:9998/rmeta/form",
+            "body": {
+              "type": "multipart-form",
+              "data": []
+            }
+          },
+          "docs": "Recursive metadata via multipart form upload"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
