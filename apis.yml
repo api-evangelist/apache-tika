@@ -27,6 +27,12 @@ tags:
   - Document Processing
   - Metadata
   - Text Extraction
+  - Open-Source
+tags_raw:
+  - Content Extraction
+  - Document Processing
+  - Metadata
+  - Text Extraction
   - Open Source
 created: '2026-03-16'
 modified: '2026-05-19'
@@ -126,6 +132,8 @@ apis:
   description: The Mime Types API from Apache Tika — 1 operation(s) for mime types.
   humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
   tags:
+  - MIME Types
+  tags_raw:
   - Mime Types
   properties:
   - type: OpenAPI
