@@ -146,7 +146,7 @@ apis:
   description: The Mime Types API from Apache Tika — 1 operation(s) for mime types.
   humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
   tags:
-  - Mime Types
+  - MIME Types
   tags_raw:
   - Mime Types
   properties:
