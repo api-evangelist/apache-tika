@@ -158,6 +158,8 @@ apis:
   description: The Parsers API from Apache Tika — 2 operation(s) for parsers.
   humanURL: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
   tags:
+  - Parser
+  tags_raw:
   - Parsers
   properties:
   - type: OpenAPI
