@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Apache Tika Server REST Apache Tika Server REST API Meta API
+  title: Apache Tika Server REST Meta API
   version: '1.0'
   description: Minimal OpenAPI for the Apache Tika Server REST API providing content and metadata extraction, language detection, translation, recursive metadata, archive unpacking, and server status endpoints.
 servers:
@@ -17,6 +17,8 @@ paths:
           description: OK
       tags:
       - Meta
+      operationId: getMeta
+      x-operation-id-source: derived
     put:
       summary: Extract document metadata
       requestBody:
@@ -30,6 +32,8 @@ paths:
           description: OK
       tags:
       - Meta
+      operationId: putMeta
+      x-operation-id-source: derived
   /meta/{key}:
     get:
       summary: Get a metadata key (identity)
@@ -44,6 +48,8 @@ paths:
           description: OK
       tags:
       - Meta
+      operationId: getMetaByKey
+      x-operation-id-source: derived
     put:
       summary: Extract specific metadata key
       parameters:
@@ -63,6 +69,8 @@ paths:
           description: OK
       tags:
       - Meta
+      operationId: putMetaByKey
+      x-operation-id-source: derived
   /meta/form:
     post:
       summary: Extract metadata via multipart form upload
@@ -76,5 +84,7 @@ paths:
           description: OK
       tags:
       - Meta
+      operationId: postMetaForm
+      x-operation-id-source: derived
 x-generated-from: https://cwiki.apache.org/confluence/display/TIKA/TikaServer
 x-generated-by: claude-crawl-2026-05-08
