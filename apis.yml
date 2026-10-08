@@ -235,6 +235,12 @@ apis:
   - type: Documentation
     url: https://tika.apache.org/
 common:
+- type: Plans
+  url: plans/apache-tika-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/apache-tika-rate-limits.yml
+- type: FinOps
+  url: finops/apache-tika-finops.yml
 - type: Website
   url: https://www.apache.org/
 - type: SecurityPolicy
