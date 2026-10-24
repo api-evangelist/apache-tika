@@ -1,9 +1,12 @@
 {
   "provider": "apache-tika",
   "sources": [
+    "_original/apache-tika-openapi.json",
     "_ae-authored/apache-tika-openapi.yml"
   ],
   "outputs": [
+    "apache-tika-queues-api-openapi.yml",
+    "apache-tika-status-api-openapi.yml",
     "apache-tika-apache-tika-server-rest-api-api-openapi.yml",
     "apache-tika-detect-api-openapi.yml",
     "apache-tika-detectors-api-openapi.yml",
@@ -12,7 +15,6 @@
     "apache-tika-mime-types-api-openapi.yml",
     "apache-tika-parsers-api-openapi.yml",
     "apache-tika-rmeta-api-openapi.yml",
-    "apache-tika-status-api-openapi.yml",
     "apache-tika-tika-api-openapi.yml",
     "apache-tika-translate-api-openapi.yml",
     "apache-tika-unpack-api-openapi.yml"
@@ -21,7 +23,8 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "apache-tika-openapi.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
     "apache-tika-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apache-tika-openapi.yml: tagged paths GET / -> Apache Tika Server REST API",
     "apache-tika-openapi.yml: tagged paths GET /tika -> Tika",
@@ -68,7 +71,8 @@
     "apache-tika-openapi.yml: declared missing tag: Tika",
     "apache-tika-openapi.yml: declared missing tag: Translate",
     "apache-tika-openapi.yml: declared missing tag: Unpack",
-    "apis.yml register: already-registered"
+    "tag 'status' spans 2 source specs (apache-tika-openapi.json, apache-tika-openapi.yml): per-path servers applied",
+    "apis.yml register: written (+1 apis, 14 total)"
   ],
   "skipped": [
     "apache-tika-apache-tika-server-rest-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
